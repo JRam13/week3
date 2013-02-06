@@ -1,0 +1,22 @@
+<h1>Dice Game</h1>
+<hr />
+
+<h2>You Rolled: <%= @rollsum2 %></h2>
+
+<h3><%= @result %></h3>
+<%= if @playagain2 == 0
+	("You Win!") end %>
+<br />
+<%= if @playagain2 == 0
+	(link_to "Play Again" , dice_url) 
+	elsif @playagain2 == 3
+	 	 ("Your point is: " + params[:roll]) end %>
+<br />
+<%= if @playagain2 == 3
+	(link_to "Roll Again", play_url(:roll => params[:roll])) end %>
+<%= if @playagain2 == 1
+	("You Lose") end %>
+<br />
+<%= if @playagain2 == 1
+	(link_to "Play Again" , dice_url) end %>
+

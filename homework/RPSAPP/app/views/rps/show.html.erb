@@ -1,0 +1,10 @@
+<h1> Welcome To Rock, Paper, Scissors </h1>
+<hr >
+
+<h2>Result: <%= @result %></h2>
+
+<%= image_tag @p + '.jpg', :size => "240x240" %>
+<%= image_tag @r + '.jpg', :size => "240x240" %>
+
+<br />
+<%= link_to "Play Again", rps_url %>

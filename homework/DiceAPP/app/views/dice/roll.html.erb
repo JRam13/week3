@@ -1,0 +1,17 @@
+<h1>Dice Game</h1>
+<hr />
+
+<h2>You Rolled: <%= @rollsum %></h2>
+
+<h3><%= @result %></h3>
+
+<%= if @playagain == 0
+	(link_to "Play Again" , dice_url) 
+	elsif @playagain != 0
+	 	 ("Your point is now: " + @rollsum.to_s) end %>
+<br />
+<%= if @playagain != 0
+("Now try to get #{@rollsum} again before you roll a 7." ) end %>
+<br />
+<%= if @playagain != 0
+(link_to "Roll Again" , play_url(:roll => @rollsum)) end %>
